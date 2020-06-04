@@ -1,0 +1,137 @@
+#pag-create-point{
+
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+#pag-create-point header{
+  display: flex;
+  justify-content: space-between;
+  margin-top:48px ;
+  align-items: center;
+}
+
+#pag-create-point a{
+  color:var(--primary-colo);
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+#pag-create-point a span{
+  background-image: url(../icones/arrow-left.svg);
+  width: 24px;
+  height: 24px;
+  display: flex;
+  margin-right: 10px;
+
+}
+
+#pag-create-point form{
+  background:white;
+  padding:64px;
+  border-radius: 8px;
+  margin: 80px auto 0;
+  max-width: 730px;
+}
+
+
+#pag-create-point form h1{
+  font-size: 36px;
+} 
+
+#pag-create-point form fieldset{
+  margin-top:64px;
+  border: 0;
+}
+
+#pag-create-point form legend{
+  margin-bottom : 40px;
+}
+
+#pag-create-point form legend h2{
+  font-size: 24px;
+}
+
+#pag-create-point form .field{
+  display: flex;
+  flex-direction: column;
+  margin-bottom:24px;
+  flex: 1;
+}
+
+#pag-create-point form  .field-group{
+  display: flex;
+}
+#pag-create-point form select,
+#pag-create-point form input{
+
+  background-color: #f0f0f5;
+  border:0;
+  border-radius: 8px;
+  padding: 16px 24px;
+  font-size: 16px;
+  
+}
+#pag-create-point form label{
+  font-size: 16px;
+  margin-bottom:8px;
+}
+
+#pag-create-point form  .field + .field{
+  margin-left: 20px;
+}
+
+#pag-create-point form button{
+  width: 260px;
+  height: 56px;
+  border: 0;
+  border-radius: 8px;
+  background-color: var(--primary-color);
+  color: white;
+  font-weight: bold;
+  margin-top: 40px;
+  transition: backgraund-color 400ms;
+}
+#pag-create-point form button:hover{
+  background-color: #2fb86e;
+}
+
+.itens-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap:16px
+}
+.itens-grid li{
+  background-color: #f5f5f5;
+  list-style: none;
+  border: 2px solid #f5f5f5;
+  border-radius: 8px;
+  height: 180px;
+
+  padding: 32px 24px 16px; 
+  
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: center;
+
+  cursor:pointer;
+ }
+ .itens-grid li span{
+   flex:1;
+   display:flex;
+   align-items: center;
+  
+   color: var(--primary-colo);
+
+ }
+
+ .itens-grid li img,
+ .itens-grid li span{
+   pointer-events: none;
+ }
+
+ .itens-grid li.selected{
+   background: #e1faec;
+   border:solid 2px #34cb79 ;
+ }
