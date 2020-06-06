@@ -64,14 +64,18 @@
 }
 #pag-create-point form select,
 #pag-create-point form input{
-
+  border-radius: 8px;
   background-color: #f0f0f5;
   border:0;
-  border-radius: 8px;
   padding: 16px 24px;
   font-size: 16px;
   
 }
+#pag-create-point form select{
+    -webkit-appearance: none; 
+  -moz-appearance:none ;
+   appearance: none;
+ }
 #pag-create-point form label{
   font-size: 16px;
   margin-bottom:8px;
@@ -121,10 +125,13 @@
    flex:1;
    display:flex;
    align-items: center;
+   justify-content: space-around;
   
    color: var(--primary-colo);
 
  }
+
+ 
 
  .itens-grid li img,
  .itens-grid li span{
@@ -135,3 +142,5 @@
    background: #e1faec;
    border:solid 2px #34cb79 ;
  }
+
+ 

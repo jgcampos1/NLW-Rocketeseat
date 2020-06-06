@@ -8,9 +8,9 @@ function populateUf() {
 
       for (const state of states) {
 
-
         selectUf.innerHTML += `<option value="${state.id}">
-      ${state.sigla}</option>`;
+        ${state.sigla}</option>`;
+
       }
 
     })
