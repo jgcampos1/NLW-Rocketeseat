@@ -1,12 +1,18 @@
 {
   "name": "NlW",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon src/server.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JGcampos1/NLW-Rocketeseat"
+  },
+  "author": "João Gabriel",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4"
+  }
 }
