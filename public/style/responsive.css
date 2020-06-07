@@ -17,6 +17,12 @@
   #page-home main{
     text-align: center;
   }
+  #pag-create-point form  .field-group{
+    flex-direction: column;
+  }
+  #pag-create-point form  .field + .field{
+    margin-left:0 ;
+  }
   #page-search-results main .cards {
     grid-template-columns: 1fr ;
   }
@@ -37,5 +43,21 @@
   #page-home{
     background-position-y: 120px;
 
+  }
+  
+}
+@media (max-width:700px ){
+  .itens-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+@media (max-width:400px ){
+
+  #pag-create-point form legend {
+    flex-direction:column ;
+  }
+
+  .itens-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -46,6 +46,14 @@
 
 #pag-create-point form legend{
   margin-bottom : 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#pag-create-point form legend span{
+  color:var(--primary-color);
+  font-size: 14px;
 }
 
 #pag-create-point form legend h2{
