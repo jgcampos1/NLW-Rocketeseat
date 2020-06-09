@@ -3,14 +3,15 @@
 
 <title>Creat Point</title>
 {% block styles %}
-  <link rel="stylesheet" href="/style/crete-point.css">
+  <link rel="stylesheet" href="/style/create-point.css">
+  <link rel="stylesheet" href="/style/modal.css">
 {% endblock styles %}
 
 {% block content %}
 
   {% include "partials/page-header.html" %}
 
-  <form>
+  <form action="/savepoint" method="post">
     <h1>Cadastro de Ponto de coleta</h1>
 
     <fieldset>
@@ -23,8 +24,8 @@
           <input type="text" name="name" required="required">
         </div>
           <div class="field">
-          <label for="imagem">Imagem da Entidade</label>
-          <input type="url" name="imagem" required="required" placeholder="http://">
+          <label for="image">Imagem da Entidade</label>
+          <input type="url" name="image" required="required" placeholder="http://">
         </div>
 
       </div>
@@ -32,13 +33,13 @@
 
         <div class="field">
           <label for="Endereço">Endereço</label>
-          <input type="text" name="Endereço" required="required">
+          <input type="text" name="address" required="required">
         </div>
 
         <div class="field">
           <label for="Complemento">Complemento
           </label>
-          <input type="text" name="Complemento">
+          <input type="text" name="address2">
         </div>
 
       </div>
@@ -49,11 +50,11 @@
 
           <label for="state">Estado</label>
 
-          <select name="uf" id="uf" required="required">
+          <select name="state" id="state" required="required">
             <option value="">Selecione o Estado</option>
           </select>
 
-          <input type="hidden" name="state" id="stateIN">
+          <input type="hidden" name="states" id="stateIN">
 
         </div>
 
@@ -79,32 +80,32 @@
       </legend>
 
       <div class="itens-grid">
-        <li data-id="1">
+        <li data-id="Lâmpada">
           <img src="./icones/lampadas.svg" alt="Lâmpada">
           <span>Lâmpada</span>
         </li>
 
-        <li data-id="2">
+        <li data-id="Pilhas e Baterias">
           <img src="./icones/baterias.svg" alt="Pilhas e Baterias">
           <span>Pilhas e Baterias</span>
         </li>
 
-        <li data-id="3">
+        <li data-id="Papéis e Papelão">
           <img src="./icones/papeis-papelao.svg" alt="Papéis e Papelão">
           <span>Papéis e Papelão</span>
         </li>
 
-        <li data-id="4">
+        <li data-id="Residuos Eletronicos">
           <img src="./icones/eletronicos.svg" alt="Residuos Eletronicos">
           <span>Residuos Eletronicos</span>
         </li>
 
-        <li data-id="5">
+        <li data-id="Resíduos Organicos">
           <img src="./icones/organicos.svg" alt="Resíduos Organicos">
           <span>Resíduos Organicos</span>
         </li>
 
-        <li data-id="6">
+        <li data-id="Óleo de Cozinha">
           <img src="./icones/oleo.svg" alt="Óleo de Cozinha">
           <span>Óleo de Cozinha</span>
         </li>
@@ -116,7 +117,13 @@
   </form>
 
 {% endblock content %}
+{% block modal %}
+{% if saved %}
+{%include "partials/point-created.html"%}
+{% endif %}
+{% endblock modal %}
 
 {% block scripts %}
-  <script src="script/create-point.js"></script>
+   <script src="/script/create-point.js"></script>
+
 {% endblock scripts %}

@@ -100,7 +100,7 @@
 
 #page-home main a span::after {
     content: "";
-    background-image: url('../icones/search.svg');
+    background-image: url('/icones/search.svg');
 
     width: 20px;
     height: 20px;

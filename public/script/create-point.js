@@ -1,14 +1,14 @@
 //buscar estado
 function populateUf() {
 
-  var selectUf = document.querySelector("#uf")
+  var selectUf = document.querySelector("#state")
   fetch("https://servicodados.ibge.gov.br/api/v1/localidades/estados")
     .then(res => res.json())
     .then(states => {
 
       for (const state of states) {
 
-        selectUf.innerHTML += `<option value="${state.id}">
+        selectUf.innerHTML += `<option value="${state.sigla}">
         ${state.sigla}</option>`;
 
       }
@@ -49,7 +49,7 @@ function getCitys(event) {
 
 }
 
-var stateUf = document.querySelector("#uf")
+var stateUf = document.querySelector("#state")
 stateUf = addEventListener("change", getCitys);
 
 

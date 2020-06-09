@@ -10,7 +10,7 @@ module.exports = db
 
 /*
 db.serialize(() => {
-
+  
   //usando comandos SLG
   //criar uma tabela 
   db.run(`
@@ -68,9 +68,10 @@ db.serialize(() => {
 
 
   })
+
   
   //delet dados
-  db.run(`DELETE FROM places WHERE id=?`, [3],function(err){
+  db.run(`DELETE FROM places WHERE id=?`, [22],function(err){
     if (err) {
       return console.log(err);
     }
